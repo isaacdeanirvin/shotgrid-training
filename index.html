@@ -249,24 +249,18 @@
 
         .modules-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-bottom: 8rem;
         }
 
-        @media (min-width: 1200px) {
-            .modules-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 1199px) and (min-width: 768px) {
+        @media (max-width: 1024px) {
             .modules-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 640px) {
             .modules-grid {
                 grid-template-columns: 1fr;
             }
@@ -283,7 +277,9 @@
             cursor: pointer;
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
         }
 
         a.module-card {
@@ -335,6 +331,7 @@
             color: #a1a1a6;
             line-height: 1.6;
             margin-bottom: 2rem;
+            flex-grow: 1;
         }
 
         .module-status {
@@ -346,6 +343,7 @@
             font-size: 0.85rem;
             color: #FF6B35;
             font-weight: 500;
+            align-self: flex-end;
         }
 
         .module-status.coming-soon {
