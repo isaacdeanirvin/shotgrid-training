@@ -421,6 +421,51 @@
             border-radius: 12px;
         }
 
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(255, 107, 53, 0.8);
+            border-color: #FF6B35;
+        }
+
+        .fullscreen-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: #fff;
+            fill: none;
+        }
+
+        .video-container:fullscreen {
+            padding-bottom: 0;
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+        }
+
+        .video-container:fullscreen iframe {
+            border-radius: 0;
+        }
+
+        .video-container:fullscreen .fullscreen-btn {
+            bottom: 24px;
+            right: 24px;
+        }
+
         .video-placeholder {
             position: absolute;
             top: 0;
@@ -710,62 +755,62 @@
         <div class="nav-content">
             <div class="nav-logo">KEVIN TRAINING</div>
             <ul class="nav-links">
-                <li><a href="#modules">Modules</a></li>
+                <li><a href="#modules">Sessions</a></li>
                 <li><a href="#smart-dailies">Smart Dailies</a></li>
                 <li><a href="#notes">Notes App</a></li>
-                <li><a href="#posting">CG Tracking</a></li>
+                <li><a href="#cg-tracking">CG Tracking</a></li>
+                <li><a href="#advanced-notes">Advanced Notes</a></li>
+                <li><a href="#posting-protocol">Posting Protocol</a></li>
                 <li><a href="#calendar">Calendar</a></li>
-                <li><a href="#review-flow">Review Flow</a></li>
-                <li><a href="#tips">Tips & Best Practices</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Modules Overview -->
     <section class="modules" id="modules">
-        <h2 class="section-title">Full Module List</h2>
+        <h2 class="section-title">All Sessions</h2>
         <p class="section-subtitle">Everything you need to run production efficiently in ShotGrid</p>
         
         <div class="modules-grid">
             <a href="#smart-dailies" class="module-card">
-                <div class="module-number">Module 01</div>
+                <div class="module-number">Session 01</div>
                 <h3 class="module-title">Smart Dailies</h3>
                 <p class="module-description">Automate and simplify reviews. Review submissions from all departments in one place.</p>
                 <span class="module-status">Available Now</span>
             </a>
 
             <a href="#notes" class="module-card">
-                <div class="module-number">Module 02</div>
+                <div class="module-number">Session 02</div>
                 <h3 class="module-title">Notes App</h3>
                 <p class="module-description">Capture feedback live during dailies. Type notes and ShotGrid delivers them to artists immediately—no recap emails needed.</p>
                 <span class="module-status">Available Now</span>
             </a>
 
-            <a href="#posting" class="module-card">
-                <div class="module-number">Module 03</div>
+            <a href="#cg-tracking" class="module-card">
+                <div class="module-number">Session 03</div>
                 <h3 class="module-title">Tracking Work in CG Shots</h3>
                 <p class="module-description">Track CG work, update statuses, and eliminate spreadsheets. Keep the show organized without asking artists for updates.</p>
                 <span class="module-status">Available Now</span>
             </a>
 
+            <a href="#advanced-notes" class="module-card">
+                <div class="module-number">Session 04</div>
+                <h3 class="module-title">Advanced Notes Tracking</h3>
+                <p class="module-description">The industry-standard method for taking notes when someone else is driving dailies. Update statuses in real time.</p>
+                <span class="module-status coming-soon">Coming Soon</span>
+            </a>
+
+            <a href="#posting-protocol" class="module-card">
+                <div class="module-number">Session 05</div>
+                <h3 class="module-title">Posting Protocol</h3>
+                <p class="module-description">Version tracking and playlist standards. The Posting playlist is your only record when there are no burnins.</p>
+                <span class="module-status coming-soon">Coming Soon</span>
+            </a>
+
             <a href="#calendar" class="module-card">
-                <div class="module-number">Module 04</div>
+                <div class="module-number">Session 06</div>
                 <h3 class="module-title">Calendar & Milestones</h3>
-                <p class="module-description">Manage posting dates, deliveries, and review sessions using the built-in calendar.</p>
-                <span class="module-status coming-soon">Coming Soon</span>
-            </a>
-
-            <a href="#review-flow" class="module-card">
-                <div class="module-number">Module 05</div>
-                <h3 class="module-title">Full Review Flow</h3>
-                <p class="module-description">A day in the life — see how everything connects in real-world production.</p>
-                <span class="module-status coming-soon">Coming Soon</span>
-            </a>
-
-            <a href="#tips" class="module-card">
-                <div class="module-number">Module 06</div>
-                <h3 class="module-title">Tips & Best Practices</h3>
-                <p class="module-description">Quick tools and habits that make ShotGrid easier to use day-to-day.</p>
+                <p class="module-description">Track posting dates, deliveries, artist vacations, OOO — everything important to production in one calendar.</p>
                 <span class="module-status coming-soon">Coming Soon</span>
             </a>
         </div>
@@ -778,13 +823,18 @@
             <div class="detail-meta">
                 <span class="meta-tag">24-Hour View</span>
                 <span class="meta-tag pink">Auto-Filter</span>
-                <span class="meta-tag">7 Steps</span>
+                
             </div>
         </div>
 
         <div class="video-wrapper">
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1ugkWvw60FnivLjWRXSQnDOhD_R9Z38R0/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1ugkWvw60FnivLjWRXSQnDOhD_R9Z38R0/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <button class="fullscreen-btn" onclick="toggleFullscreen(this)">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -817,8 +867,8 @@
         </div>
 
         <div class="content-nav">
-            <a href="#modules" class="nav-btn">← Back to Modules</a>
-            <a href="#notes" class="nav-btn">Next Module →</a>
+            <a href="#modules" class="nav-btn">← Back to Sessions</a>
+            <a href="#notes" class="nav-btn">Next Session →</a>
         </div>
     </section>
 
@@ -829,13 +879,18 @@
             <div class="detail-meta">
                 <span class="meta-tag">Live Review Notes</span>
                 <span class="meta-tag pink">Auto-Delivery</span>
-                <span class="meta-tag">5 Videos</span>
+                
             </div>
         </div>
 
         <div class="video-wrapper">
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1ecJ5MLLo76mnUt2RaIpfVm1AjVWjFDZp/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1ecJ5MLLo76mnUt2RaIpfVm1AjVWjFDZp/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <button class="fullscreen-btn" onclick="toggleFullscreen(this)">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -875,24 +930,29 @@
 
         <div class="content-nav">
             <a href="#smart-dailies" class="nav-btn">← Previous</a>
-            <a href="#posting" class="nav-btn">Next Module →</a>
+            <a href="#cg-tracking" class="nav-btn">Next Session →</a>
         </div>
     </section>
 
     <!-- Module 3: CG Tracking -->
-    <section class="content-detail" id="posting">
+    <section class="content-detail" id="cg-tracking">
         <div class="detail-header">
             <h2>Tracking Work in CG Shots</h2>
             <div class="detail-meta">
                 <span class="meta-tag">CG Tracking</span>
                 <span class="meta-tag pink">Status Updates</span>
-                <span class="meta-tag">5 Videos</span>
+                
             </div>
         </div>
 
         <div class="video-wrapper">
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1aN8F8ANYM458qVQGiAVe1ypuvQ4uYTR-/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1aN8F8ANYM458qVQGiAVe1ypuvQ4uYTR-/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <button class="fullscreen-btn" onclick="toggleFullscreen(this)">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -925,17 +985,128 @@
 
         <div class="content-nav">
             <a href="#notes" class="nav-btn">← Previous</a>
-            <a href="#calendar" class="nav-btn">Next Module →</a>
+            <a href="#advanced-notes" class="nav-btn">Next Session →</a>
         </div>
     </section>
 
-    <!-- Module 4: Calendar -->
+    <!-- Module 4: Advanced Notes Tracking -->
+    <section class="content-detail" id="advanced-notes">
+        <div class="detail-header">
+            <h2>Advanced Notes Tracking – The Review Notes App</h2>
+            <div class="detail-meta">
+                <span class="meta-tag">Industry Standard</span>
+                <span class="meta-tag pink">Real-Time Status</span>
+                <span class="meta-tag coming-soon">Coming Soon</span>
+            </div>
+        </div>
+
+        <div class="video-wrapper">
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Overview</h3>
+            <p>Learn the industry-standard method for taking notes during dailies when someone else is driving playback. The Review Notes App is how every major VFX studio captures feedback — update statuses in real time, route notes to the right artist, and publish a clean summary email to your leads and producers.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>What You'll Learn</h3>
+            <ul class="guide-list">
+                <li>Launching the Review Notes App from a playlist</li>
+                <li>Navigating the interface — left panel, right panel, and the three tabs</li>
+                <li>Taking notes in real time while someone else drives dailies</li>
+                <li>Standardized note format: [note] - [DEPT]</li>
+                <li>Routing cross-department notes to the correct artist</li>
+                <li>Updating task statuses live (Pending Review → Kickback → Complete → Final)</li>
+                <li>Using Preview & Publish to send a summary email to leads</li>
+            </ul>
+        </div>
+
+        <div class="tips-box">
+            <h3>Note Format & Best Practices</h3>
+            <ul class="tips-list">
+                <li><strong>Format:</strong> [note] - [DEPT]</li>
+                <li><strong>Example: </strong> Move the keylight more to the right - LIGHT</li>
+                <li><strong>Example: </strong> Tail coming down too fast around frame 1032 - ANIM</li>
+                <li><strong>Example: </strong> Car is too shiny - LOOKDEV</li>
+                <li>Be specific — frame numbers are huge</li>
+                <li>Don't paraphrase — capture what the supervisor actually says</li>
+                <li>Status flow: Pending Review → Kickback → Complete → Final</li>
+            </ul>
+        </div>
+
+        <div class="content-nav">
+            <a href="#cg-tracking" class="nav-btn">← Previous</a>
+            <a href="#posting-protocol" class="nav-btn">Next Session →</a>
+        </div>
+    </section>
+
+    <!-- Module 5: Posting Protocol -->
+    <section class="content-detail" id="posting-protocol">
+        <div class="detail-header">
+            <h2>Posting Protocol – Version Tracking & Playlist Standards</h2>
+            <div class="detail-meta">
+                <span class="meta-tag">Version Tracking</span>
+                <span class="meta-tag pink">Client Notes</span>
+                <span class="meta-tag coming-soon">Coming Soon</span>
+            </div>
+        </div>
+
+        <div class="video-wrapper">
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Overview</h3>
+            <p>Learn the discipline behind version tracking on posting days. When work goes to a client with no burnins, the Posting playlist is your only record. This video covers the workflow, naming conventions, and how to keep client notes organized so nobody's guessing when feedback comes back.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>What You'll Learn</h3>
+            <ul class="guide-list">
+                <li>Why version tracking matters — the snowball effect</li>
+                <li>Posting playlist naming convention (YYYY_MM_DD_POSTING)</li>
+                <li>The posting workflow — create, track, confirm, record</li>
+                <li>Two methods for building your playlist</li>
+                <li>Switching note type from Internal to Client</li>
+                <li>Handling client notes — type them or screengrab visual markups</li>
+                <li>Dailies playlist naming convention (YYYY_MM_DD_DAILIES)</li>
+            </ul>
+        </div>
+
+        <div class="tips-box">
+            <h3>Posting Workflow — In Order of Importance</h3>
+            <ul class="tips-list">
+                <li><strong>1. Create the playlist first thing</strong> — don't scramble after the fact</li>
+                <li><strong>2. Confirm with leads before it goes out</strong> — make sure it matches the edit</li>
+                <li><strong>3. Trust the playlist when notes come back</strong> — it's the only record</li>
+                <li><strong>4. Keep notes organized</strong> — type them or screengrab, get them on the version</li>
+                <li><strong>Naming:</strong> YYYY_MM_DD_POSTING / YYYY_MM_DD_DAILIES</li>
+                <li><strong>Multiple sessions:</strong> YYYY_MM_DD_DAILIES_ANIM, YYYY_MM_DD_DAILIES_COMP</li>
+            </ul>
+        </div>
+
+        <div class="content-nav">
+            <a href="#advanced-notes" class="nav-btn">← Previous</a>
+            <a href="#calendar" class="nav-btn">Next Session →</a>
+        </div>
+    </section>
+
+    <!-- Module 6: Calendar -->
     <section class="content-detail" id="calendar">
         <div class="detail-header">
             <h2>Calendar and Milestones</h2>
             <div class="detail-meta">
                 <span class="meta-tag">Production Schedule</span>
-                <span class="meta-tag pink">Milestones</span>
+                <span class="meta-tag pink">Google Calendar</span>
                 <span class="meta-tag coming-soon">Coming Soon</span>
             </div>
         </div>
@@ -950,118 +1121,35 @@
 
         <div class="info-box">
             <h3>Overview</h3>
-            <p>Manage posting dates, deliveries, and review sessions using the built-in calendar. Keep the entire team aligned with a live production schedule.</p>
+            <p>Track posting dates, deliveries, milestones, and OOO days using a Google Calendar embedded directly in ShotGrid. The calendar lives on a project page so the whole team sees the same schedule — no spreadsheets, no guessing.</p>
         </div>
 
         <div class="info-box">
-            <h3>What You'll Learn</h3>
+            <h3>How It Works</h3>
             <ul class="guide-list">
-                <li>Opening and navigating the ShotGrid calendar</li>
-                <li>Adding milestones and delivery events</li>
-                <li>Linking events to shots, playlists, or sequences</li>
-                <li>Filtering events by department</li>
-                <li>Keeping posting and delivery dates up to date</li>
-                <li>Using the calendar as the team's live production schedule</li>
-            </ul>
-        </div>
-
-        <div class="content-nav">
-            <a href="#posting" class="nav-btn">← Previous</a>
-            <a href="#review-flow" class="nav-btn">Next Module →</a>
-        </div>
-    </section>
-
-    <!-- Module 5: Full Review Flow -->
-    <section class="content-detail" id="review-flow">
-        <div class="detail-header">
-            <h2>Full Review Flow – A Day in the Life</h2>
-            <div class="detail-meta">
-                <span class="meta-tag">Real-World Workflow</span>
-                <span class="meta-tag pink">Complete Process</span>
-                <span class="meta-tag coming-soon">Coming Soon</span>
-            </div>
-        </div>
-
-        <div class="video-wrapper">
-            <div class="video-container">
-                <div class="video-placeholder">
-                    <div class="play-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <h3>Overview</h3>
-            <p>See how everything connects together in a real-world production scenario. Follow a complete day's workflow from morning dailies to final approvals.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>What You'll Learn</h3>
-            <ul class="guide-list">
-                <li>Checking Smart Dailies each morning</li>
-                <li>Running reviews and sending notes</li>
-                <li>Tracking updated versions automatically</li>
-                <li>Following up on open notes in the Notes App</li>
-                <li>Updating task statuses and closing out approvals</li>
-                <li>Using the calendar to track milestones and deliveries</li>
-                <li>How this workflow saves time and keeps the studio aligned</li>
-            </ul>
-        </div>
-
-        <div class="content-nav">
-            <a href="#calendar" class="nav-btn">← Previous</a>
-            <a href="#tips" class="nav-btn">Next Module →</a>
-        </div>
-    </section>
-
-    <!-- Module 6: Tips & Best Practices -->
-    <section class="content-detail" id="tips">
-        <div class="detail-header">
-            <h2>Bonus – ShotGrid Tips and Best Practices</h2>
-            <div class="detail-meta">
-                <span class="meta-tag">Quick Tools</span>
-                <span class="meta-tag pink">Daily Habits</span>
-                <span class="meta-tag coming-soon">Coming Soon</span>
-            </div>
-        </div>
-
-        <div class="video-wrapper">
-            <div class="video-container">
-                <div class="video-placeholder">
-                    <div class="play-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <h3>Overview</h3>
-            <p>Quick tools and habits that make ShotGrid easier to use day-to-day. Learn the shortcuts, naming conventions, and common pitfalls to avoid.</p>
-        </div>
-
-        <div class="info-box">
-            <h3>What You'll Learn</h3>
-            <ul class="guide-list">
-                <li>Recommended naming conventions (for playlists, notes, and tasks)</li>
-                <li>Common mistakes to avoid in production</li>
-                <li>How to customize your filters for faster access</li>
-                <li>Keyboard shortcuts and view settings</li>
-                <li>How to clean up old data or test projects</li>
+                <li>Create a Google Calendar for the project</li>
+                <li>Add posting dates, deliveries, milestones, and OOO</li>
+                <li>Get the shareable embed URL from Google Calendar</li>
+                <li>In ShotGrid, create a Calendar page for the project</li>
+                <li>Add a Web Page Widget and paste the Google Calendar embed URL</li>
+                <li>The calendar now shows live inside ShotGrid</li>
             </ul>
         </div>
 
         <div class="tips-box">
-            <h3>Studio Standards</h3>
+            <h3>What Goes on the Calendar</h3>
             <ul class="tips-list">
-                <li>Playlists: YYYY_MM_DD_TYPE (e.g., 2025_10_31_DAILIES)</li>
-                <li>Shots: SEQ###_SH####_v###</li>
-                <li>Tasks: Department_TaskType_v###</li>
-                <li>Milestones: ClientName_DeliveryType_Date</li>
+                <li><strong>Postings:</strong> Posting EOD 2, Posting EOD 3</li>
+                <li><strong>Deliveries:</strong> Final delivery dates</li>
+                <li><strong>Approvals:</strong> Post for Approval milestones</li>
+                <li><strong>OOO:</strong> Team member out-of-office days</li>
+                <li>Keep it updated — this is how the team knows what's coming</li>
             </ul>
         </div>
 
         <div class="content-nav">
-            <a href="#review-flow" class="nav-btn">← Previous</a>
-            <div></div>
+            <a href="#posting-protocol" class="nav-btn">← Previous</a>
+            <a href="#modules" class="nav-btn">Back to Sessions →</a>
         </div>
     </section>
 
@@ -1073,6 +1161,18 @@
     </div>
 
     <script>
+        // Fullscreen Toggle Function
+        function toggleFullscreen(btn) {
+            const container = btn.parentElement;
+            if (!document.fullscreenElement) {
+                container.requestFullscreen().catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
         // Scroll to Top Button Functionality
         const scrollToTopBtn = document.getElementById('scrollToTop');
         
